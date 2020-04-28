@@ -1,0 +1,46 @@
+/* Farben */
+@weiss: #fff;
+@schwarz: #000;
+@grau: #ccc;
+@gruen: #01550e;
+@rot: #CC0000;
+@weissgrau: #ECECEC;
+@dunkelgrau: #555;
+@sidebarmenu: #e9ecef;
+
+// Style Mixins
+.text-columns(@columns:2) {
+    -webkit-column-count: @columns;
+    -moz-column-count: @columns;
+    -ms-column-count: @columns;
+    -o-column-count: @columns;
+    column-count: @columns;
+}
+.column-gap(@gap: 15px) {
+    -webkit-column-gap: @gap;
+    -moz-column-gap: @gap;
+    -ms-column-gap: @gap;
+    -o-column-gap: @gap;
+    column-gap: @gap;
+}
+.transition(@style: all .5s) {
+    -webkit-transition: @style;
+    -moz-transition: @style;
+    -ms-transition: @style;
+    -o-transition: @style;
+    transition: @style;
+}
+.transition2(@style: all .5s,@style2: all .5s) {
+    -webkit-transition: @style,@style2;
+    -moz-transition: @style,@style2;
+    -ms-transition: @style,@style2;
+    -o-transition: @style,@style2;
+    transition: @style,@style2;
+}
+.align-items(@align: center) {
+    align-items: @align;
+    -ms-align-items: @align;
+    -o-align-items: @align;
+    -webkit-align-items: @align;
+    -moz-align-items: @align;
+}

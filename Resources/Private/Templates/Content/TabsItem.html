@@ -1,0 +1,26 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="de"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+    
+    <f:layout name="Flux/Content"/>
+    
+    <f:section name="Configuration">
+        <flux:form id="TabsItem" label="Tab Element" description="Einzelnes Tab Element" options="{group: 'Rasterelemente'}">
+            <flux:form.option.icon value="EXT:sitepackage/Resources/Public/Images/Grids/grid_standard.png"/>
+            <flux:grid>
+                <flux:grid.row>
+                    <flux:grid.column colPos="0" label="Inhalt" style="width: 100%;"/>
+                </flux:grid.row>
+            </flux:grid>
+        </flux:form>
+    </f:section>
+    
+    <f:section name="Preview">
+        <b>Tab Item (Überschrift muss vergeben werden)</b>
+    </f:section>
+    
+    <f:section name="Main">
+            <flux:content.render area="0"/>
+    </f:section>
+</div>

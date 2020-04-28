@@ -1,0 +1,223 @@
+/****************************************************************************************
+# Default css file for content edited with htmlArea RTE
+#
+# Defines a few class selectors that can be simply taken as examples by anyone who needs to configure the RTE.
+# This css file is referenced by property RTE.default.contentCSS in the default configuration of htmlArea RTE.
+# ***************************************************************************************/
+/* Benutzerdefinierte Style */
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+	overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+html {
+	font-size: 16px;
+}
+body {
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+h1 {
+	font-size: 24px;
+	font-size: 1.5rem;
+}
+h2 {
+	font-size: 20px;
+	font-size: 1.25em;
+}
+h3 {
+	font-size: 18px;
+	font-size: 1.125em;
+}
+h4, h5, h6 {
+	font-size: 16px;
+	font-size: 1rem;
+}
+.fauxHeadline {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+.kleiner {
+	font-size: .9em;
+}
+.groesser-125 {
+	font-size: 1.25em;
+}
+.groesser-150 {
+	font-size: 1.5em;
+}
+.gridelement {
+	padding-bottom: 1em;
+}
+hr {
+	border: 0px;
+	border-bottom: 1px solid #ccc;
+	clear: both;
+	margin: 16px 0px 18px;
+	height: 0px;
+}
+.fauxHeadline {
+    font-size: 18px;
+    font-size: 1.125rem;
+}
+.kleiner {
+    font-size: .9em;
+}
+.groesser-125 {
+    font-size: 1.25em;
+}
+.groesser-150 {
+    font-size: 1.5em;
+}
+.gruen {
+    color: #01550e;
+}
+.rot {
+    color: #CC0000;
+}
+.grau {
+    color: #ECECEC;
+}
+#logo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+a {
+    color: #000;
+}
+a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+/* Chrome autofill entfernen */
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #f8f8fa inset !important;
+}
+div[role="main"] {
+	margin-bottom: 3em;
+}
+.maincontent ul li {
+	list-style: disc;
+}
+footer.pagefooter {
+	padding: 1em 0em;
+	color: #000;
+	background: #e1dede;
+	line-height: 1em;
+	font-size: 1em;
+}
+
+/* Kontaktformular */
+.form-group .control-label{
+	display: block;
+	width: 200px;
+	float: left;
+	clear: left;
+	font-weight: bold;
+	cursor: pointer;
+	padding-top: .5em;
+}
+
+.input .form-control {
+	width: 400px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.input .form-control:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.next .btn-primary, .submit .btn-primary {
+	margin: 10px 16px 10px 198px;
+	border: 0;
+	padding: 5px 20px;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	background: #191919;
+	width: 400px;
+}
+
+/* Footer */
+footer h3, footer h2, footer h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* ENDE Footer */
+
+/* Kontaktformular ENDE */
+.totop {
+	background: url('../Images/ic_arrow_drop_down_circle_48px.svg');
+	width: 48px;
+	height: 48px;
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	z-index: 9999;
+}
+.totop a {
+	text-indent: -99999px;
+	display: block;
+	width: 48px;
+	height: 48px;
+}
+
+figcaption.align-center {
+	text-align: center;
+}
+figcaption.align-left {
+	text-align: left;
+}
+figcaption.align-right {
+	text-align: right;
+}
+
+/* Mobil */
+
+@media only screen and (max-width: 767px) {
+	.ce-textpic, .ce-image, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div {
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	/* Kontaktformular */
+	.input .form-control {
+		width: 100%;
+	}
+	.next .btn-primary, .submit .btn-primary {
+		margin: 10px 0;
+		width: 100%;
+	}
+	/* Kontaktformular ENDE */
+}
+
+/* ENDE Mobil */
+
+/* flux - Tabs */
+.frame-type-sitepackage_tabs_item > header {
+    display: none;
+}
+.nav.nav-tabs > li {
+    list-style: none;
+}
+/* ENDE flux - Tabs */

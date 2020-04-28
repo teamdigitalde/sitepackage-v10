@@ -1,0 +1,16 @@
+<div id="accordion-{data.uid}">
+    <div class="card">
+        <div id="" class="card-header" id="head-{data.uid}">
+            <h4 class="panel-title">
+                <a href="" class="accordion-toggle collapsed" href="/collapse-{data.uid}" data-target="#collapse-{data.uid}" data-toggle="collapse" aria-expanded="false">
+                    {data.flexform_titel}
+                </a>
+            </h4>
+        </div>
+        <div class="collapse" id="collapse-{data.uid}" data-parent="#content" aria-labelledby="head-{data.uid}">
+            <div class="card-body">
+                <f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+            </div>
+        </div>
+    </div>
+</div>

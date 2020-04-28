@@ -1,0 +1,33 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<nav class="menu">
+    <!-- Erste Ebene -->
+    <v:menu entryLevel="1" levels="2">
+        <ul>
+            <f:for each="{menu}" as="item-lvl-1">
+                <li class="{f:if(condition:
+                                '{item-lvl-1.hasSubPages}',then:'has-subpages',else:'')} {f:if(condition:'{item-lvl-1.current}',then:'current')}">
+                    <a {f:if(condition:'{item-lvl-1.target} == "_blank"', then:"target=_blank")} href="{f:uri.page(pageUid:item-lvl-1.uid)}" class="{f:if(condition:'{item-lvl-1.current}',then:' is-current',else:'')}">
+                        {item-lvl-1.linktext}
+                    </a>
+                    <!-- Zweite Ebene -->
+                    <f:if condition="{item-lvl-1.active}">
+                        <v:menu pageUid="{item-lvl-1.uid}">
+                            <ul>
+                                <f:for each="{menu}" as="item-lvl-2">
+                                    <li
+                                        {f:if(condition:'{item-lvl-2.hasSubPages}',then:'
+                                    class="has-subpages"',else:'')}>
+                                    <a {f:if(condition:'{item-lvl-2.target} == "_blank"', then:"target=_blank")} href="{f:uri.page(pageUid:item-lvl-2.uid)}" {f:if(condition:'{item-lvl-2.current}',then:'class="is-current"',else:'')}>
+                                    <span>{item-lvl-2.linktext}</span>
+                                    </a>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </v:menu>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </v:menu>
+</nav>

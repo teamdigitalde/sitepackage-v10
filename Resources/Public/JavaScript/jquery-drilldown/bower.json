@@ -1,0 +1,12 @@
+{
+  "name": "jquery-drilldown",
+  "version": "1.0.0",
+  "main": "jquery.drilldown.js",
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  }
+}

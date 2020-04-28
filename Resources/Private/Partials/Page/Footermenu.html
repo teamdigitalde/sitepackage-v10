@@ -1,0 +1,17 @@
+<f:variable name="CurrentLanguage" value="{data.sys_language_uid}"/>
+
+<ul class="footermenu">
+    <f:for each="{Footermenu}" as="lvl1" iteration="i">
+        <f:if condition="{CurrentLanguage} == {lvl1.data.sys_language_uid}">
+            <li class="nav-item x{lvl1.data.uid}{f:if(condition: '{lvl1.children}',then:' dropdown')}{f:if(condition:'{lvl1.current}',then:' active')}{f:if(condition: i.isFirst, then: ' first')}{f:if(condition: i.isLast, then: ' last')}">
+                <a {f:if(condition:'{lvl1.target} == "_blank"', then:"target=_blank")} href="{f:uri.page(pageUid:lvl1.data.uid)}" class="{f:if(condition:'{lvl1.active}',then:' is-current')} {f:if(condition: '{lvl1.children}',then:'navbarDropdown dropdown-toggle')} nav-link" title="{lvl1.data.title}">
+                    {f:if(condition: '{lvl1.data.nav_title}',then:'{lvl1.data.nav_title}',else:'{lvl1.data.title}')}
+                </a>
+            </li>
+        </f:if>
+    </f:for>
+</ul>
+
+<f:comment>
+    <!-- Zum Einbunden, <f:render partial="Topmenu" arguments="{_all}"/>, in die Main.html einfügen und DIESEN KOMMENTAR LÖSCHEN!!! -->
+</f:comment>

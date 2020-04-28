@@ -1,0 +1,355 @@
+/****************************************************************************************
+# Default css file for content edited with htmlArea RTE
+#
+# Defines a few class selectors that can be simply taken as examples by anyone who needs to configure the RTE.
+# This css file is referenced by property RTE.default.contentCSS in the default configuration of htmlArea RTE.
+# ***************************************************************************************/
+/* Benutzerdefinierte Style */
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: @weiss;
+
+    h1 {
+        font-size: 24px;
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 20px;
+        font-size: 1.25em;
+    }
+    h3 {
+        font-size: 18px;
+        font-size: 1.125em;
+    }
+    h4, h5, h6 {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+    .fauxHeadline {
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    .kleiner {
+        font-size: .9em;
+    }
+    .groesser-125 {
+        font-size: 1.25em;
+    }
+    .groesser-150 {
+        font-size: 1.5em;
+    }
+    .gridelement {
+        padding-bottom: 1em;
+    }
+    .header-center {
+        text-align: center;
+    }
+    .header-left {
+        text-align: left;
+    }
+    .header-right {
+        text-align: right;
+    }
+    hr {
+        border: 0px;
+        border-bottom: 1px solid @grau;
+        clear: both;
+        margin: 16px 0px 18px;
+        height: 0px;
+    }
+    .fauxHeadline {
+        font-size: 18px;
+        font-size: 1.125rem;
+    }
+    .kleiner {
+        font-size: .9em;
+    }
+    .groesser-125 {
+        font-size: 1.25em;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .btn-group > .btn:first-child {
+        margin-left: 198px;
+    }
+    .groesser-150 {
+        font-size: 1.5em;
+    }
+    .gruen {
+        color: @gruen;
+    }
+    .rot {
+        color: @rot;
+    }
+    .grau {
+        color: @weissgrau;
+    }
+    #logo {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    a {
+        color: @schwarz;
+    }
+    a:hover {
+        color: @schwarz;
+        text-decoration: underline;
+    }
+    .bg-grey {
+        background-color: @grau;
+    }
+    .bg-white {
+        background-color: @weiss;
+    }
+    .bg-black {
+        background-color: @schwarz;
+    }
+    /* Chrome autofill entfernen */
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #f8f8fa inset !important;
+    }
+    div[role="main"] {
+        margin-bottom: 3em;
+    }
+    .maincontent {
+        ul {
+            li {
+                list-style: disc;
+            }
+        }
+    }
+    footer.pagefooter {
+        padding: 1em 0em;
+        color: @schwarz;
+        background: @grau;
+        line-height: 1em;
+        font-size: 1em;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Kontaktformular */
+    .form-group{
+        .control-label{
+            display: block;
+            width: 200px;
+            float: left;
+            clear: left;
+            font-weight: bold;
+            cursor: pointer;
+            padding-top: .5em;
+        }
+    }
+    .input.checkbox .form-check {
+        padding-left: 0;
+        margin-bottom: -15px;
+
+        input[type="checkbox"] {
+            margin-right: 15px;
+        }
+    }
+
+    .input{
+        .form-control {
+            width: 400px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: @dunkelgrau;
+            background-color: @weiss;
+            background-image: none;
+            border: 1px solid @grau;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        }
+    }
+    .input{
+        .form-control:focus {
+            border-color: #66afe9;
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        }
+    }
+    .next .btn-primary, .submit .btn-primary {
+        margin: 10px 16px 10px 198px;
+        border: 0;
+        padding: 5px 20px;
+        color: @weiss;
+        font-weight: bold;
+        cursor: pointer;
+        background: #191919;
+        width: 400px;
+    }
+
+    /* Footer */
+    footer{
+        h3, h2, h4 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+    /* ENDE Footer */
+
+    /* Kontaktformular ENDE */
+    .totop {
+        background: url('../Images/ic_arrow_drop_down_circle_48px.svg');
+        width: 48px;
+        height: 48px;
+        display: none;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 9999;
+    }
+    .totop {
+        a {
+            text-indent: -99999px;
+            display: block;
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    figcaption.align-center {
+        text-align: center;
+    }
+    figcaption.align-left {
+        text-align: left;
+    }
+    figcaption.align-right {
+        text-align: right;
+    }
+    /* flux - Tabs */
+    .frame-type-sitepackage_tabs_item > header {
+        display: none;
+    }
+    .nav.nav-tabs > li {
+        list-style: none;
+    }
+    /* ENDE flux - Tabs */
+    .schwarzTransparenterHintergrund {
+        position: absolute;
+        width: 0;
+        height: 100%;
+        background: rgba(0,0,0,0);
+        z-index: 9999;
+        .transition2(width .5s, background .5s);
+
+        &.active {
+            width: 100%;
+            background: rgba(0,0,0,.7);
+            .transition2(width .5s, background .5s);
+            position: fixed;
+        }
+    }
+}
+
+/* Mobil */
+
+@media only screen and (max-width: 767px) {
+    .ce-textpic, .ce-image, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    /* Kontaktformular */
+    .input .form-control {
+        width: 100%;
+    }
+    .next .btn-primary, .submit .btn-primary {
+        margin: 10px 0;
+        width: 100%;
+    }
+    body {
+        #content {
+            input, textarea {
+                max-width: 100%;
+                width: 100%;
+            }
+            .actions {
+                .form-navigation {
+                    width: 100%;
+                    .btn-toolbar {
+                        width: 100%;
+                        .btn-group {
+                            width: 100%;
+                            button {
+                                max-width: 100%;
+                                width: 100%;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        table.contenttable {
+            thead {
+                display: none;
+            }
+            tbody {
+
+                tr {
+                    float: left;
+                    width: 100%;
+                    margin-bottom: 2em;
+
+                    td {
+                        float: left;
+                        width: 100%;
+                        padding: 0;
+                        overflow: hidden;
+                        display: flex;
+
+                        .responsive-table_left-content {
+                            flex: 0 0 40%;
+                            background: #eee;
+                            border-right: 2px solid black;
+
+                            &::before {
+                                content: attr(data-label);
+                                width: 100%;
+                                float: left;
+                                padding: 1em;
+                                font-weight: bold;
+                                margin: -10px;
+                            }
+                        }
+                        .responsive-table_right-content {
+                            flex: 0 0 60%;
+                            overflow: hidden;
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* Kontaktformular ENDE */
+}
+
+/* ENDE Mobil */
+

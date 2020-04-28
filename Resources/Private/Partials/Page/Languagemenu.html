@@ -1,0 +1,24 @@
+<div class="languageMenu">
+    <div class="currentLanguage">
+        <f:for each="{Languagemenu}" as="language">
+            <f:if condition="{language.active} == 1">
+                <span class="menu__label">{language.twoLetterIsoCode}</span>
+            </f:if>
+        </f:for>
+    </div>
+    <ul class="menu menu--language">
+        <f:for each="{Languagemenu}" as="language">
+            <li class="menu__item">
+                <a href="{language.link}" class="menu__link{f:if(condition:'{language.active} == 1',then:' menu__link--current')}">
+                    <span class="menu__label">{language.twoLetterIsoCode}</span>
+                </a>
+            </li>
+        </f:for>
+    </ul>
+</div>
+
+<f:debug>{Languagemenu}</f:debug>
+
+<f:comment>
+	<!--Zum Einbunden, <f:render partial="Page/Languagemenu" arguments="{_all}"/>, in die Main.html einf�gen und DIESEN KOMMENTAR L�SCHEN!!!-->
+</f:comment>

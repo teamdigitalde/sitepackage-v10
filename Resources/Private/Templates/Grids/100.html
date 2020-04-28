@@ -1,0 +1,15 @@
+<div
+    class="fullWidth {data.flexform_bgcolor} {f:if(condition:'{data.flexform_ImageAsBackground}', then:'imageContainerBackground')}"
+    style="
+        {f:if(condition:'{data.flexform_backgroundfile}',then:'background-image:url({data.flexform_backgroundfile});')}
+        {f:if(condition:'{data.space_before_class}', then:'padding-top:{data.space_before_class}px;')}
+        {f:if(condition:'{data.space_after_class}', then:'padding-bottom:{data.space_after_class}px;')}
+    ">
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12 column1">
+            <f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+        </div>
+    </div>
+</div>
+</div>

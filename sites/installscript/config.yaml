@@ -1,0 +1,55 @@
+rootPageId: 1
+base: /
+baseVariants: {  }
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: default
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ''
+    flag: de
+errorHandling: {  }
+routes: {  }
+#routeEnhancers:
+#  PageTypeSuffix:
+#    type: CustomPageType
+#    default: '.html'
+#    index: 'index'
+#    map:
+#      '.html': 0
+#  NewsPlugin:
+#    type: Extbase
+#    limitToPages: [33]
+#    extension: News
+#    plugin: Pi1
+#    routes:
+#      - { routePath: '{news_title}', _controller: 'News::detail', _arguments: {'news_title': 'news'} }
+#    defaultController: 'News::detail'
+#    aspects:
+#      news_title:
+#        type: PersistedAliasMapper
+#        tableName: 'tx_news_domain_model_news'
+#        routeFieldName: 'path_segment'
+#  ReferentsPlugin:
+#    type: Extbase
+#    limitToPages:
+#      - DetailID
+#    extension: Referents
+#    plugin: Referents
+#    routes:
+#      - routePath: '{referent}'
+#        _controller: 'Referents::show'
+#        _arguments:
+#          referent: referent
+#    defaultController: 'Referents::show'
+#    aspects:
+#      referent:
+#        type: PersistedAliasMapper
+#        tableName: tx_referents_domain_model_referent
+#        routeFieldName: path_segment

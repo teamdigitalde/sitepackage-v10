@@ -1,0 +1,15 @@
+<f:layout name="Main" />
+<f:section name="Layout2">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-8 col-sm-8 maincontent">
+				<!--TYPO3SEARCH_begin-->
+					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+				<!--TYPO3SEARCH_end-->
+			</div>
+			<div class="col-xs-12 col-md-4 col-sm-4 sidebar">
+				<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
+			</div>
+		</div>
+	</div>
+</f:section>

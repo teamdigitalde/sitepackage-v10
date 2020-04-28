@@ -1,0 +1,11 @@
+<div class="50-50" style="background-image:url('/{backgroundfile}')" {f:if(condition: '{data.space_before_class} || {data.space_after_class}', then: 'style="{f:if(condition: "{data.space_before_class}", then: "padding-top: {data.space_before_class}px;")}
+{f:if(condition: "{data.space_after_class}", then: "padding-bottom: {data.space_after_class}px;")}"')}>
+    <div class="row">
+        <div class="col-xl-6 column1">
+            <f:format.raw>{data.tx_gridelements_view_column_0}</f:format.raw>
+        </div>
+        <div class="col-xl-6 column2">
+            <f:format.raw>{data.tx_gridelements_view_column_1}</f:format.raw>
+        </div>
+    </div>
+</div>

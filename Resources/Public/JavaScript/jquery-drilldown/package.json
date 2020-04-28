@@ -1,0 +1,23 @@
+{
+  "name": "jquery-drilldown",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Aleksandras Nelkinas <alex@cinamonas.io>",
+  "homepage": "http://cinamonas.github.io/jquery-drilldown/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Cinamonas/jquery-drilldown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cinamonas/jquery-drilldown/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-bump": "^0.3.0",
+    "gulp-uglify": "^1.1.0"
+  }
+}

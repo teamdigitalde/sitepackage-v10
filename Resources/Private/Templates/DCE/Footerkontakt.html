@@ -1,0 +1,27 @@
+{namespace dce=ArminVieweg\Dce\ViewHelpers}
+<div class="dce">
+    <div itemscope itemtype="http://schema.org/Organization">
+        <f:if condition="{fields.name}">
+            <p><strong><span itemprop="name">{fields.name}</span></strong></p>
+        </f:if>
+        <f:if condition="{fields.strasse} || ({fields.city} && {fields.plz})">
+                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                    <f:if condition="{fields.strasse}">
+                        <p><span itemprop="streetAddress">{fields.strasse}</span><br></p>
+                    </f:if>
+                    <f:if condition="{fields.plz} && {fields.city}">
+                        <p><span itemprop="postalCode">{fields.plz}</span> {fields.city}<br></p>
+                    </f:if>
+                </div>
+        </f:if>
+        <f:if condition="{fields.tel}">
+            <p>Tel: <span itemprop="telephone">{fields.tel}</span><br></p>
+        </f:if>
+        <f:if condition="{fields.fax}">
+            <p>Fax: <span itemprop="faxNumber">{fields.fax}</span></p>
+        </f:if>
+        <f:if condition="{fields.email}">
+			<p>E-Mail: <f:link.email email="{fields.email}" title="{fields.email}"><span itemprop="email">{fields.email}</span></f:link.email></p>	
+		</f:if>
+    </div>
+</div>

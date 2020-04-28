@@ -1,0 +1,52 @@
+<f:variable name="CurrentLanguage" value="{data.sys_language_uid}"/>
+<ul class="nav navbar-nav">
+    <f:for each="{Mainmenu}" as="lvl1" iteration="i">
+        <f:if condition="{CurrentLanguage} == {lvl1.data.sys_language_uid}">
+            <li class="nav-item level1 x{lvl1.data.uid}{f:if(condition: '{lvl1.children}',then:' dropdown')}{f:if(condition:'{lvl1.current}',then:' active')}{f:if(condition: i.isFirst, then: ' first')}{f:if(condition: i.isLast, then: ' last')}">
+                <a {f:if(condition:'{lvl1.target} == "_blank"', then:"target=_blank")} href="{f:uri.page(pageUid:lvl1.data.uid)}" id="{f:if(condition: '{lvl1.children}',then:'navbarDropdown')}" class="{f:if(condition:'{lvl1.active}',then:' is-current')} {f:if(condition: '{lvl1.children}',then:'navbarDropdown dropdown-toggle')} nav-link" title="{lvl1.data.title}">
+                    {f:if(condition: '{lvl1.data.nav_title}',then:'{lvl1.data.nav_title}',else:'{lvl1.data.title}')}
+                </a>
+                <div class="mobileToggleDropdown">
+                    <div>
+                        <span class="lineOne"></span>
+                        <span class="lineTwo"></span>
+                    </div>
+                </div>
+                <!-- Zweite Ebene -->
+                <f:if condition="{lvl1.children}">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <f:for each="{lvl1.children}" as="lvl2">
+                            <f:if condition="{CurrentLanguage} == {lvl2.data.sys_language_uid}">
+                                <li class="level2 x{lvl2.data.uid} {f:if(condition: '{lvl2.children}',then:'dropdown-submenu')}">
+                                    <a {f:if(condition:'{lvl2.target} == "_blank"', then:"target=_blank")} id="{f:if(condition:'{lvl2.children}',then:'navbarDropdownMenu')}" class="nav-link {f:if(condition:'{lvl2.active}',then:'active ')}{f:if(condition:'{lvl2.children}',then:'dropdown-toggle')}" href="{f:uri.page(pageUid:lvl2.data.uid)}" title="{lvl2.data.title}">
+                                        {f:if(condition: '{lvl2.data.nav_title}',then:'{lvl2.data.nav_title}',else:'{lvl2.data.title}')}
+                                    </a>
+                                    <div class="mobileToggleDropdown">
+                                        <div>
+                                            <span class="lineOne"></span>
+                                            <span class="lineTwo"></span>
+                                        </div>
+                                    </div>
+                                    <!-- Dritte Ebene -->
+                                    <f:if condition="{lvl2.children}">
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <f:for each="{lvl2.children}" as="lvl3">
+                                                <f:if condition="{CurrentLanguage} == {lvl1.data.sys_language_uid}">
+                                                    <li class="level3 x{lvl3.data.uid} {f:if(condition: '{lvl3.children}',then:'dropdown-submenu')}">
+                                                        <a {f:if(condition:'{lvl3.target} == "_blank"', then:"target=_blank")} id="{f:if(condition:'{lvl3.children}',then:'navbarDropdownMenu')}" class="nav-link {f:if(condition:'{lvl3.active}',then:'active ')}{f:if(condition:'{lvl3.children}',then:'dropdown-toggle')}" href="{f:uri.page(pageUid:lvl3.data.uid)}" title="{lvl3.data.title}">
+                                                            {f:if(condition: '{lvl3.data.nav_title}',then:'{lvl3.data.nav_title}',else:'{lvl3.title}')}
+                                                        </a>
+                                                    </li>
+                                                </f:if>
+                                            </f:for>
+                                        </ul>
+                                    </f:if>
+                                </li>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                </f:if>
+            </li>
+        </f:if>
+    </f:for>
+</ul>

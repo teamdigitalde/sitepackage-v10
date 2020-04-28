@@ -1,0 +1,18 @@
+<f:layout name="Main" />
+<f:section name="Layout3">
+<div class="container">
+	<div class="row">
+		<div class="col-md-3 left">
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
+		</div>
+		<div class="col-md-6 maincontent">
+			<!--TYPO3SEARCH_begin-->
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
+			<!--TYPO3SEARCH_end-->
+		</div>
+		<div class="col-md-3 sidebar">
+			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '2'}" />
+		</div>
+	</div>
+</div>
+</f:section>

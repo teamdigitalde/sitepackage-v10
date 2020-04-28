@@ -1,0 +1,11 @@
+<ul class="nav {data.flexform_display_type}">
+    <f:for each="{data.tx_gridelements_view_children}" as="tab" iteration="tab_iteration">
+        <li id="c{tab.uid}" class="nav-item {f:if(condition:'{tab_iteration.isFirst}',then:' active')}">
+            <a href="#tab-content-{tab.uid}" class="nav-link" data-toggle="tab" role="tab">{tab.flexform_titel}</a>
+        </li>
+    </f:for>
+</ul>
+
+<div class="tab-content">
+    <f:format.raw>{data.tx_gridelements_view_columns.0}</f:format.raw>
+</div>

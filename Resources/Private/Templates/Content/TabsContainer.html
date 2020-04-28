@@ -1,0 +1,77 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="de"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+    <f:layout name="Flux/Content"/>
+
+    <f:section name="Configuration">
+        <flux:form id="TabsContainer" label="Äußerer Tab Container" description="Äußerer Tab Container" options="{group: 'Rasterelemente'}">
+            <flux:form.option.icon value="EXT:sitepackage/Resources/Public/Images/Grids/grid_standard.png"/>
+            <flux:grid>
+                <flux:grid.row>
+                    <flux:grid.column colPos="0" label="Inhalt" style="width: 100%;"/>
+                </flux:grid.row>
+            </flux:grid>
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <b>Tab Container</b>
+    </f:section>
+
+    <f:section name="Main">
+        <div class="TabContainer">
+            <ul class="nav nav-tabs" role="tablist">
+                <flux:content.get area="0" as="item" render="FALSE">
+                    <f:for each="{item}" as="i" iteration="iterator">
+                        <f:if condition="{iterator.isFirst}">
+                            <f:then>
+                                <li class="nav-item" id="c{i.uid}">
+                                    <a href="#tab-content-{i.uid}" class="nav-link active" data-toggle="tab" role="tab" aria-selected="true">
+                                        {i.header}
+                                    </a>
+                                </li>
+                            </f:then>
+                            <f:else>
+                                <li class="nav-item" id="c{i.uid}">
+                                    <a href="#tab-content-{i.uid}" class="nav-link" data-toggle="tab" role="tab" aria-selected="false">
+                                        {i.header}
+                                    </a>
+                                </li>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </flux:content.get>
+            </ul>
+            <div class="tab-content">
+                <flux:content.get area="0" as="item" render="false">
+                    <f:for each="{item}" as="i" iteration="iterator">
+                        <f:if condition="{iterator.isFirst}">
+                            <f:then>
+                                <div id="tab-content-{i.uid}" class="tab-pane active in">
+                                    <flux:content.get area="0" as="content">
+                                        <f:format.html>{content.{iterator.index}}</f:format.html>
+                                    </flux:content.get>
+                                </div>
+                            </f:then>
+                            <f:else>
+                                <div id="tab-content-{i.uid}" class="tab-pane">
+                                    <flux:content.get area="0" as="content">
+                                        <f:format.html>{content.{iterator.index}}</f:format.html>
+                                    </flux:content.get>
+                                </div>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </flux:content.get>
+            </div>
+            <f:comment>
+                <div class="tab-content">
+                    <flux:content.render area="0"/>
+                </div>
+
+            </f:comment>
+        </div>
+    </f:section>
+</div>

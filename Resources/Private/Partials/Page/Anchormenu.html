@@ -1,0 +1,10 @@
+<f:variable name="CurrentLanguage" value="{data.sys_language_uid}"/>
+<ul class="nav navbar-nav">
+    <f:for each="{anchors}" as="anchor" iteration="i">
+        <li id="anchor{anchor.uid}" class="nav-item level1">
+            <f:link.typolink class="nav-link" parameter="{anchor.link}" title="{f:if(condition:'{anchor.title}', then:'{anchor.title}', else:'{anchor.name}')}">
+                {anchor.name}
+            </f:link.typolink>
+        </li>
+    </f:for>
+</ul>

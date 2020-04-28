@@ -1,0 +1,31 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="de"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+    
+    <f:layout name="Flux/Content"/>
+    
+    <f:section name="Configuration">
+        <flux:form id="Youtube" label="Youtube Video" description="Binde einen Youtube iFrame ein" options="{group: 'Customcontents'}">
+            <flux:form.option.icon value="EXT:sitepackage/Resources/Public/Plugins/youtube/images/icon.png"/>
+            
+            <flux:field.input name="iframe" label="Youtube iFrame (Linkaufbau: https://www.youtube.com/embed/VIDEO_ID)"/>
+            <flux:field.select label="Seitenverhältnis auswählen" name="verhaeltnis" items="{
+                           0:{0:'21/9',1:'embed-responsive-21by9'},
+                           1:{0:'16/9',1:'embed-responsive-16by9'},
+                           2:{0:'4/3',1:'embed-responsive-4by3'},
+                           3:{0:'1/1',1:'embed-responsive-1by1'}
+                           }"/>
+        </flux:form>
+    </f:section>
+    
+    <f:section name="Preview">
+        <b>Youtube iFrame</b>
+    </f:section>
+    
+    <f:section name="Main">
+        <div class="embed-responsive {verhaeltnis}">
+            <iframe class="embed-responsive-item" src="{iframe}" allowfullscreen></iframe>
+        </div>
+    </f:section>
+</div>

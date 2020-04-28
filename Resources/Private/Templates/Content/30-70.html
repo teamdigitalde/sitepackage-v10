@@ -1,0 +1,38 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+     xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+    
+    <f:layout name="Flux/Content"/>
+    
+    <f:section name="Configuration">
+        <flux:form id="30-70" label="30-70" description="Zweispaltiges Gridelement 30-70" options="{group: 'Rasterelemente'}">
+            <flux:form.option.icon value="EXT:sitepackage/Resources/Public/Images/Grids/grid-2spaltig30-70.png"/>
+            <flux:grid>
+                <flux:grid.row>
+                    <flux:grid.column colPos="0" label="Inhalt Links" style="width: 50%"/>
+                    <flux:grid.column colPos="1" label="Inhalt Rechts" style="width: 50%"/>
+                </flux:grid.row>
+            </flux:grid>
+        </flux:form>
+    </f:section>
+    
+    <f:section name="Preview">
+        <b>30-70 - Gridelement</b>
+    </f:section>
+    
+    <f:section name="Main">
+        <div class="gridelement"
+             {f:if(condition: '{record.space_before_class} || {record.space_after_class}', then: 'style="{f:if(condition: "{record.space_before_class}", then: "padding-top: {record.space_before_class}px;")}
+        {f:if(condition: "{record.space_after_class}", then: "padding-bottom: {record.space_after_class}px;")}"')}>
+        <div class="row">
+            <div class="col-md-3 column0">
+                <flux:content.render area="0"/>
+            </div>
+            <div class="col-md-9 column1">
+                <flux:content.render area="1"/>
+            </div>
+        </div>
+</div>
+    </f:section>
+</div>
