@@ -702,6 +702,7 @@ config {
 	language = de
 	locale_all = de_DE.UTF-8
 	sys_language_isocode_default = de
+	htmlTag_langKey = de-DE
 	typolinkEnableLinksAcrossDomains = 1
 
 	// Link settings
@@ -733,25 +734,6 @@ config {
 
 	// keep file-name
 	meaningfulTempFilePrefix = 100
-	# Include Boilerplate handling for IE browsers
-	htmlTag_stdWrap {
-		setContentToCurrent = 1
-		cObject = COA
-		cObject {
-			10 = LOAD_REGISTER
-			10 {
-				newLine.char = 10
-				tagEnd {
-					current = 1
-					split.max = 2
-					split.token = <html
-					split.returnKey = 1
-				}
-			}
-
-			90 = RESTORE_REGISTER
-		}
-	}
 
 	concatenateCss = 0
 	concatenateJs = 0
