@@ -28,5 +28,5 @@ $EM_CONF[$_EXTKEY] = [
     'author' => 'team digital',
     'author_email' => 'info@team-digital.de',
     'author_company' => 'team digital GmbH',
-    'version' => '3.2.0',
+    'version' => '3.3.0',
 ];

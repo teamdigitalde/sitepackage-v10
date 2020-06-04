@@ -164,6 +164,16 @@ tx_gridelements.setup.uebb_bootstrap_tabs_tab {
 	}
 }
 
+div {
+	iconIdentifier = content-special-div
+	title = Divider
+	description = This element inserts a visual divider.
+		tt_content_defValues {
+		CType = div
+	}
+	saveAndClose = true
+}
+
 @import 'EXT:sitepackage/Configuration/PageTS/BackendLayouts/Layout1.ts'
 @import 'EXT:sitepackage/Configuration/PageTS/BackendLayouts/Layout2.ts'
 @import 'EXT:sitepackage/Configuration/PageTS/BackendLayouts/Layout3.ts'
