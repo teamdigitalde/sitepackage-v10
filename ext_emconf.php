@@ -11,9 +11,7 @@ $EM_CONF[$_EXTKEY] = [
         'conflicts' => [
         ],
         'depends' => [
-            'gridelements' => '9.0.0-11.0.0',
-            'dce' => '2.4.0-3.9.9',
-            'vhs' => '6.0.0-9.0.0'
+            'gridelements' => '9.0.0-11.0.0'
         ]
     ],
     'autoload' => [
